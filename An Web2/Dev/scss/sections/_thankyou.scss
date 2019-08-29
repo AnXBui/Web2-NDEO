@@ -1,0 +1,37 @@
+#thankyou{
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  >article{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1{
+      font-family: realist, sans-serif;
+      font-size: rem-calc(40px);
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    > nav {
+      margin-bottom: 15px;
+      a {
+        font-weight: 600;
+        font-size: rem-calc(20px);
+        display: inline-block;
+        background-color: white;
+        padding: 15px 35px;
+        border-radius: 35px;
+        color: $primary;
+      }
+    }
+  }
+
+}

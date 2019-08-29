@@ -1,0 +1,215 @@
+/* =============
+    Vision
+============== */
+#vision{
+  // top: 600px;
+  // height: 1400px;
+  padding-top: 150px;
+  z-index: 2;
+  position: relative;
+
+  @include md{
+    margin-top: -450px;
+    z-index: -5;
+  }
+
+
+.quote{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  @include md{
+    height: 500px;
+    width: 90%;
+  }
+
+  .expanded-quote{
+    @include md{
+      &::before{
+        top: 3%;
+        left: 10%;
+      }
+      &::after{
+        bottom: 10%;
+        right: 10%;
+      }
+    }
+  }
+
+  >div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+
+    &::before{
+      position: absolute;
+      content:'';
+      display: block;
+      width: 80px;
+      height: 60px;
+      background-image: url('../img/Home/About/quote.svg');
+      transform: scaleX(-1);
+      background-size: contain;
+      background-repeat: no-repeat;
+      top: 60px;
+      left: 20px;
+      transition: 1s;
+      transition-timing-function: ease-in-out;
+
+      @include md{
+        top: 45%;
+        left: 45%;
+        margin-left: -40px;
+        margin-top: -30px;
+      }
+    }
+    &::after{
+      position: absolute;
+      content:'';
+      display: block;
+      width: 80px;
+      height: 60px;
+      background-image: url('../img/Home/About/quote.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      bottom: 40px;
+      right: 20px;
+      transition: 1s;
+      transition-timing-function: ease-in-out;
+      @include md{
+        bottom: 45%;
+        right: 45%;
+        margin-right: -40px;
+        margin-bottom: -30px;
+      }
+    }
+  }
+}
+
+.wavy{
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  // background-color: red;
+  // opacity: 0.5;
+
+  @include md{
+    height: 800px;
+  }
+  >div{
+    position: relative;
+    width: 100%;
+    height: 110%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    &::before{
+      position: absolute;
+      content:'';
+      display: block;
+      width: 35px;
+      height: 240px;
+      background-image: url('../img/Home/About/wavy.svg');
+      transform: rotate(90deg );
+      background-size: cover;
+      background-repeat: no-repeat;
+      top: 0px;
+      margin-top: -100px;
+      right: 0;
+      margin-right: 50px;
+
+      @include md{
+        margin-top: -100px;
+        right: 80px;
+        width: 100px;
+        height: 400px;
+        background-size: contain;
+
+      }
+    }
+    &::after{
+      position: absolute;
+      content:'';
+      display: block;
+      width: 40px;
+      height: 180px;
+      background-image: url('../img/Home/About/wavy.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      bottom: 70px;
+      left: 10vw;
+
+      @include md{
+        left: 15vw;
+        width: 60px;
+        height: 240px;
+        bottom: 0;
+      }
+    }
+  }
+
+}
+
+
+.main-content{
+  -webkit-box-shadow: 6px 8px 7px -5px $shadow;
+  -moz-box-shadow: 6px 8px 7px -5px $shadow;
+  box-shadow: 6px 8px 7px -5px $shadow;
+  margin-top: 70px;
+  margin-bottom: 150px;
+  padding: 25px;
+  padding-bottom: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+  @include md{
+    padding-top: 300px;
+    width: 85%;
+    border-bottom-right-radius: 50px;
+  }
+
+  >article{
+    max-width: 400px;
+
+    @include md{
+      max-width: 600px;
+      opacity: 0;
+      padding-bottom: 80px;
+      margin-top: 80px;
+    }
+  }
+  p{
+    font-size: rem-calc(28px);
+    line-height: 38px;
+    font-weight: 100;
+
+    @include md{
+      font-size: rem-calc(35px);
+      line-height: 50px;
+
+    span{
+      font-family: realist, sans-serif;
+      font-weight: 600;
+      font-size: rem-calc(30px);
+      @include md{
+        font-size: rem-calc(36px);
+      }
+    }
+
+    }
+  }
+
+  h3{
+    font-family: realist, sans-serif;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+
+  }
+}
+}

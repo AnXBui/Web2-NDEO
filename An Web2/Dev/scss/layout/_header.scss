@@ -1,0 +1,50 @@
+/* =============
+    Header
+============= */
+header {
+    z-index: 100;
+    position: sticky;
+    top:0;
+    display: grid;
+    grid-template-areas: "logo burger" "nav nav";
+    grid-template-columns: auto 30%;
+    background-color: white;
+    @include lg {
+        grid-template-areas: "logo nav";
+        grid-template-columns: 30% auto;
+    }
+    // logo container
+    section:nth-child(2) {
+        align-items: center;
+        display: flex;
+        align-items: center;
+        grid-area: logo;
+        padding: 10px;
+
+        button {
+            background-color: white;
+            border: none;
+            outline: none;
+        }
+    }
+    // burger container
+    section:nth-child(1) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        grid-area: burger;
+        padding: 10px;
+        @include lg {
+            display: none;
+        }
+
+    }
+    // nav container
+    nav {
+        display: none;
+        grid-area: nav;
+        @include lg {
+            display: block !important;
+        }
+    }
+}

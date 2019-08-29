@@ -1,0 +1,85 @@
+/* =============
+    Navigation
+============= */
+.expanded{
+  >input{
+    width: 200px !important;
+    border: 1px solid $grey !important;
+    color: black;
+  }
+  >div{
+    background-color: $primary;
+    color: white;
+    clip-path: none;
+
+  }
+}
+
+header{
+  // logo container
+  section:nth-child(2){
+    >div{
+      height: rem-calc(40px);
+      width: 80px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('../img/Header/header-logo.png');
+    }
+  }
+
+  // burger container
+  section:nth-child(1) {
+    >button{
+      border: 0;
+      outline: 0;
+      background-color: transparent;
+    }
+
+  }
+
+  >nav{
+    >ul{
+      display: flex;
+      flex-direction: column;
+
+      form{
+        display: flex;
+
+      div{
+          font-size: rem-calc(14px);
+          border: none;
+          outline: none;
+          background-color: $grey;
+          height: 30px;
+          width: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          clip-path: ellipse(15px 15px);
+          transition: 0.75s;
+          transition: color 0.25s;
+          transition-delay: clip-path 0.15s;
+        }
+        input{
+          outline: none;
+          width: 0;
+          border: none;
+          transition: width 0.5s;
+          color: transparent;
+        }
+      }
+
+      @include lg{
+        font-size: rem-calc(18px);
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: rem-calc(20px) rem-calc(10px);
+        li{
+          margin-left: rem-calc(15px);
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,292 @@
+/* =============
+    Join
+============= */
+#join {
+  margin-top: 150px;
+  padding-bottom: 60px;
+  overflow-x: hidden;
+
+  @include sm{
+    display: grid;
+    grid-template-columns: auto 550px auto;
+  }
+
+  @include md{
+    display: grid;
+    grid-template-columns: auto 90% auto;
+  }
+
+  .main-content{
+    padding-top: 60px;
+    -webkit-box-shadow: -4px 32px 40px -20px $shadow;
+    -moz-box-shadow: -4px 32px 40px -20px $shadow;
+    box-shadow: -4px 32px 40px -20px $shadow;
+    @include sm{
+      grid-column: 2 / 3;
+      border-radius: 30px;
+      padding-bottom: 60px;
+    }
+
+    @include md{
+      padding-bottom: 100px;
+    }
+    > article {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        font-family: realist, sans-serif;
+
+        @include md{
+          font-size: rem-calc(76px);
+        }
+      }
+
+      p {
+        font-weight: 100;
+        line-height: 27px;
+        max-width: 300px;
+      }
+    }
+
+    ul {
+      margin-top: 50px;
+      display: grid;
+      grid-template-rows: repeat(4,auto);
+      grid-template-columns: 100%;
+
+      @include md{
+        grid-template-rows: repeat(2,auto);
+        grid-template-columns: repeat(2,1fr);
+
+      }
+
+      .join-text {
+        margin-bottom: 60px;
+        h1 {
+          font-family: realist, sans-serif;
+          font-weight: 600;
+          font-size: rem-calc(28px);
+        }
+
+        p {
+          font-weight: 100;
+          line-height: 27px;
+          max-width: 320px;
+        }
+
+        nav {
+          a {
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: rem-calc(16px);
+            display: inline-block;
+            background-color: $primary;
+            padding: 10px 20px;
+            border-radius: 35px;
+            color: white;
+          }
+        }
+      }
+
+      .join-img {
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+
+        @include md{
+          mix-blend-mode: multiply;
+        }
+
+
+        .img{
+          background-size: 300px;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          @include md{
+            background-size: 450px;
+          }
+        }
+
+        .circles{
+            position: absolute;
+            display: block;
+            width: 140vw;
+            height: 140vw;
+            max-width: 380px;
+            max-height: 380px;
+            background-color: $primary;
+            border-radius: 100%;
+            z-index: -1;
+            top: 15%;
+
+            @include md{
+              width: 660px;
+              height: 660px;
+              max-width: none;
+              max-height: none;
+              top: 0;
+            }
+        }
+        // &::before {
+        //   position: absolute;
+        //   content: '';
+        //   display: block;
+        //   width: 90%;
+        //   padding-bottom: 90%;
+        //   background-color: $primary;
+        //   border-radius: 90%;
+        //   z-index: -1;
+        // }
+      }
+
+      .wavy{
+        position: relative;
+        width: 100%;
+        >div{
+          position: absolute;
+          background-image: url('../img/Home/Join/wavy.svg');
+          background-repeat: no-repeat ;
+        }
+      }
+
+      > li {
+        grid-column: 1 / 2;
+
+        &:nth-child(1) {
+          padding-right: 20px;
+          text-align: right;
+          direction: rtl;
+
+          @include md{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+          }
+        }
+
+        &:nth-child(2) {
+          padding-left: 20px;
+          @include md{
+            grid-row: 2 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        &:nth-child(3) {
+          grid-row: 1 / 2;
+          .img{
+            height: 560px;
+            width: 100%;
+            background-image: url("../img/Home/Join/join-teacher.png");
+
+            @include md{
+              height: 700px;
+              width: 150%;
+              margin-left: -100px;
+            }
+          }
+
+          .circles{
+            @include md{
+              margin-left: -260px;
+            }
+          }
+
+        }
+
+        &:nth-child(4) {
+          grid-row: 3 / 4;
+          @include md{
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+          }
+
+          .circles{
+            @include md{
+              margin-right: -260px;
+              right: 0;
+            }
+          }
+
+          .img{
+            height: 460px;
+            width: 100%;
+            background-image: url("../img/Home/Join/join-student.png");
+            @include md{
+              height: 700px;
+              width: 150%;
+              margin-right: -100px;
+            }
+          }
+
+
+
+        }
+
+        &:nth-child(5){
+          grid-row: 3 / 4;
+          grid-column: 1 / 2;
+
+          @include md{
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+          }
+          >div{
+            top: -20px;
+            height: 20px;
+            width: 150px;
+
+            @include sm{
+              margin-left: -40px;
+            }
+
+            @include md{
+            top: 20%;
+            right: 0;
+            width: 250px;
+            height: 50px;
+            margin-right: -80px;
+            }
+          }
+        }
+
+        &:nth-child(6){
+          grid-row: 5 / 6;
+          grid-column: 1 / 2;
+
+          @include md{
+            grid-row: 2 / 3;
+          }
+          >div{
+            bottom: 0;
+            right: 0;
+            margin-right: -25px;
+            height: 40px;
+            width: 200px;
+
+            @include md{
+              right: auto;
+              left: 0;
+              margin-left: -50px;
+              bottom: 10%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+}

@@ -1,0 +1,320 @@
+/* =============
+    Contacts
+============= */
+#contacts {
+
+  margin-bottom: 150px;
+  position: relative;
+
+  @include sm{
+    display: grid;
+    grid-template-columns: auto 85% auto;
+  }
+
+  .main-content {
+    overflow-y: visible;
+    position: relative;
+    -webkit-box-shadow: 6px 8px 7px -5px $shadow;
+    -moz-box-shadow: 6px 8px 7px -5px $shadow;
+    box-shadow: 6px 8px 7px -5px $shadow;
+    background-color: white;
+
+
+    @include sm{
+      grid-column: 2 / 3;
+      border-radius: 40px;
+    }
+
+    ul {
+      display: grid;
+
+      @include md{
+        grid-template-columns: 50% 50%;
+      }
+
+      > li {
+        &:nth-child(1) {
+          height: 300px;
+          background-image: url("../img/Home/Contacts/contact.jpg");
+          background-position: center;
+          background-size: cover;
+
+          @include md{
+            height: 100%;
+            width: 100%;
+            min-height: 400px;
+          }
+        }
+
+        &:nth-child(2) {
+
+          @include md{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          > article {
+            padding: 30px;
+
+            h1 {
+              font-family: realist, sans-serif;
+              font-size: rem-calc(25px);
+              font-weight: 600;
+              margin-bottom: 3px;
+              color: black;
+            }
+
+            p {
+              font-weight: 100;
+              line-height: 22px;
+              margin-bottom: 20px;
+            }
+
+            > nav {
+              a {
+                display: inline-block;
+                background-color: $primary;
+                padding: 10px 15px;
+                border-radius: 20px;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .visual-elements {
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 200px);
+    margin-top: -100px;
+    top: 0;
+    z-index: -1;
+
+    .circle{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 200px;
+      background-color: $primary;
+    }
+
+    >div {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      >div{
+        &:first-child{
+          width: 150px;
+          height: 150px;
+          top: 40px;
+          right: 0;
+          margin-right: -100px;
+          z-index: -1;
+
+          @include sm{
+          margin-right: 0;
+          }
+
+        }
+
+        &:last-child{
+          bottom: 0;
+          left: 0;
+          margin-bottom: 20px;
+          margin-left: -100px;
+          z-index: -1;
+
+        }
+      }
+    }
+  }
+
+  .visual-elements-front {
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 200px);
+    margin-top: -100px;
+    top: 0;
+    z-index: 5;
+    pointer-events: none;
+
+    .line{
+      position: absolute;
+      width: 200px;
+      height: 4px;
+      border-radius: 200px;
+      background-color: $accent;
+    }
+
+    >div{
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      >div{
+        &:first-child{
+        right: 0;
+        transform: rotate(-25deg);
+        top: 90px;
+        margin-right: -50px;
+        width: 150px;
+
+        @include sm{
+          top: 120px;
+        }
+        }
+
+        &:last-child{
+        bottom: 0;
+        transform: translateY(-80px) rotate(45deg);
+        margin-left: -70px;
+
+        }
+      }
+
+
+    }
+
+  }
+}
+
+#contact-form {
+  top: 0;
+  left: 0;
+  background-color: white;
+  position: absolute;
+  width: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $light-grey;
+  clip-path: inset(0% 0% calc(100% - 20px) calc(100% - 20px));
+  transition: 0.25s;
+  transition-timing-function: ease;
+  box-shadow: inherit;
+
+  @include md{
+    clip-path: inset(calc(97% - 20px) calc(97% - 20px) 3% 3%);
+    display: grid;
+    grid-template: auto 600px auto;
+  }
+
+  > button {
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    font-size: rem-calc(30px);
+    color: $primary;
+  }
+
+  > form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 20px;
+    width: 90%;
+    height: 90%;
+    max-height: 400px;
+
+    @include md{
+      grid-column: 2 / 3;
+    }
+
+    > div {
+      input {
+        width: 100%;
+        height: 30px;
+        border: none;
+        border: 1px $grey solid;
+
+        &::placeholder {
+          padding-left: 5px;
+          color: $grey;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: 60px;
+        border: none;
+        border: 1px $grey solid;
+
+        &::placeholder {
+          padding-left: 5px;
+          color: $grey;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      button {
+        display: inline-block;
+        padding: 15px 40px;
+        background-color: $primary;
+        border-radius: 40px;
+        color: white;
+        font-family: realist, sans-serif;
+        font-weight: 600;
+        font-size: rem-calc(20px);
+      }
+
+      &:nth-child(1) {
+        grid-column: span 2;
+
+        h1 {
+          font-family: realist, sans-serif;
+          font-size: rem-calc(35px);
+          font-weight: 600;
+          margin-bottom: 3px;
+          color: black;
+          text-align: center;
+        }
+      }
+
+      &:nth-child(2) {
+        grid-column: span 2;
+      }
+
+      &:nth-child(3) {
+        grid-column: span 1;
+      }
+
+      &:nth-child(4) {
+        grid-column: span 1;
+      }
+
+      &:nth-child(5) {
+        grid-column: span 2;
+      }
+
+      &:nth-child(6) {
+        grid-column: span 2;
+      }
+
+      &:nth-child(7) {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        grid-column: span 2;
+      }
+    }
+  }
+}

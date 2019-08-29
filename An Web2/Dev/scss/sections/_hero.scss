@@ -1,0 +1,65 @@
+/* =============
+    Hero
+============== */
+#hero{
+  >div{
+    @include md{
+    display: grid;
+    grid-template-columns: 20px auto 20px;
+  }
+    >div{
+      width: 100%;
+      height: 100vh;
+      background-color: grey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      @include md{
+        grid-column: 2 / 3;
+        height: 650px;
+      }
+      >article{
+        margin: auto 5%;
+        text-align: center;
+        color: white;
+
+        h1{
+          font-family: realist, sans-serif;
+          font-weight: 600;
+          font-size: rem-calc(21px);
+          span{
+            color: $primary
+          }
+        }
+
+        p{
+          margin-top: rem-calc(5px);
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .counter-master{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    display: flex;
+    .active-counter{
+      background-color: white;
+    }
+
+    .circle-counter{
+      width: rem-calc(10px);
+      height: rem-calc(10px);
+      border-radius: 100px;
+      margin-left: 10px;
+      border: 1px solid white;
+      &:first-child{
+      margin-left: 0;
+      }
+    }
+  }
+}
