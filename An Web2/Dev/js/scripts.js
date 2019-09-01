@@ -50,10 +50,10 @@ var formVisible = false;
 function formToggle() {
   console.log("click");
   if (formVisible === false) {
-    $contactForm.addClass("form-expanded");
+    $contactForm.toggleClass("form-expanded");
     formVisible = true;
   } else {
-    $contactForm.removeClass("form-expanded");
+    $contactForm.toggleClass("form-expanded");
     formVisible = false;
   }
 }
@@ -105,7 +105,8 @@ $(document).ready(function() {
 // };
 $(function(){
 
-var controller = new ScrollMagic.Controller();
+var controller = new ScrollMagic.Controller({container: "#site-wrapper"});
+
 var $container1 = $('#about-main');
 var height1 = $container1.outerHeight();
 var duration1 = height1;
@@ -128,7 +129,9 @@ var tween = TweenMax.to('#about-circle', 0.5, {
    bezier:{curviness:1.25, values:circlePath, autoRotate:true},
    ease: Power1.easeOut,
    width: 100,
-   height: 100
+   height: 100,
+   force3D:true,
+   rotationZ:0.01   
  });
 
  // Create the Scene and trigger when visible
@@ -167,32 +170,33 @@ timeline.add(tween1).add(tween2);
  var parallaxTimeline = new TimelineMax();
 
 
- var parallax1 = TweenMax.fromTo('#events .p-layer-1', 1, {
-   y: +200,
+
+ var parallax1 = TweenMax.fromTo('#events .main-content .p-layer-1', 1, {
+   y: +100,
    ease: Linear.easeNone
  },
   {
-    y: -200,
+    y: -100,
     ease: Linear.easeNone
-   });
+  },0);
 
-  var parallax2 = TweenMax.fromTo('#events .p-layer-2', 1, {
-     y: +300,
+  var parallax2 = TweenMax.fromTo('#events .main-content .p-layer-2', 1, {
+     y: +150,
      ease: Linear.easeNone
    },
    {
-      y: -300,
+      y: -150,
       ease: Linear.easeNone
-    });
+    },"-=1");
 
-   var parallax3 = TweenMax.fromTo('#events .p-layer-3', 1, {
-     y: +400,
+   var parallax3 = TweenMax.fromTo('#events .main-content .p-layer-3', 1, {
+     y: +200,
      ease: Linear.easeNone
    },
     {
-      y: -400,
+      y: -200,
       ease: Linear.easeNone
-     });
+    },"-=1");
 
 
 

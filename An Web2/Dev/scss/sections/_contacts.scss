@@ -201,22 +201,29 @@
   flex-direction: column;
   background-color: $light-grey;
   clip-path: inset(0% 0% calc(100% - 20px) calc(100% - 20px));
+  -webkit-clip-path: inset(0% 0% calc(100% - 20px) calc(100% - 20px));
   transition: 0.25s;
   transition-timing-function: ease;
   box-shadow: inherit;
 
   @include md{
     clip-path: inset(calc(97% - 20px) calc(97% - 20px) 3% 3%);
+    -webkit-clip-path: inset(calc(97% - 20px) calc(97% - 20px) 3% 3%);
     display: grid;
     grid-template: auto 600px auto;
   }
 
-  > button {
+  > nav{
     position: absolute;
-    right: 8px;
+    right: 12px;
     top: 12px;
     font-size: rem-calc(30px);
-    color: $primary;
+    color: transparent;
+    transition: color 0.5s;
+    transition-timing-function: ease;
+    @include md{
+
+    }
   }
 
   > form {
@@ -265,7 +272,7 @@
         }
       }
 
-      button {
+    button{
         display: inline-block;
         padding: 15px 40px;
         background-color: $primary;
@@ -274,6 +281,10 @@
         font-family: realist, sans-serif;
         font-weight: 600;
         font-size: rem-calc(20px);
+        -webkit-appearance: none;
+        border-style: none;
+        border: 0;
+
       }
 
       &:nth-child(1) {

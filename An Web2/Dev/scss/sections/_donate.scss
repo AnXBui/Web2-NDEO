@@ -66,11 +66,16 @@
   .donate-hero {
     display: flex;
     justify-content: center;
-    background-image: url("../img/Home/Donate/donate-hero.webp");
+    background-image: url("../img/Home/Donate/donate-hero.png");
     background-size: 150%;
+    background-color: $primary;
     background-position: bottom right;
     background-blend-mode: multiply;
-    background-color: $primary;
+    background-repeat: no-repeat;
+
+    @include md{
+      background-size: cover;
+    }
 
     > article {
       max-width: 250px;
@@ -129,10 +134,76 @@
     }
   }
 
-  .donate-list {
+  .donate-list{
+
+      .donate-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @include md{
+          width: 100%;
+          height: 100%;
+        }
+
+        .donate-img {
+          width: 60vw;
+          height: 60vw;
+          max-width: 350px;
+          max-height: 350px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          border-radius: 60vw;
+
+          @include md{
+            width: 300px;
+            height: 300px;
+          }
+        }
+
+        > article {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          h2 {
+            margin-top: 30px;
+            text-align: center;
+            font-family: realist, sans-serif;
+            font-size: rem-calc(25px);
+            font-weight: 600;
+            margin-bottom: 12px;
+          }
+
+          p {
+            text-align: center;
+            max-width: 300px;
+            font-weight: 100;
+            line-height: 22px;
+            margin-bottom: 20px;
+          }
+
+          > nav {
+            margin-bottom: 80px;
+
+            a {
+              font-weight: 600;
+              font-size: rem-calc(20px);
+              display: inline-block;
+              background-color: $primary;
+              padding: 15px 35px;
+              border-radius: 35px;
+              color: white;
+            }
+          }
+        }
+      }
     #donate-1 {
       background-image: url("../img/Home/Donate/donate1.jpg");
-      background-position: right center;
+      background-position: 80% center;
     }
 
     #donate-2 {
@@ -152,119 +223,116 @@
   }
 
   .donate-list-tablet {
-    display: grid;
-    margin-top: -200px;
-    grid-template-columns: 10% auto 10%;
-    >ul{
-      grid-column: 2 / 3;
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      grid-template-rows: repeat(2,auto);
-    >li{
-      &:nth-child(1){
-        @include md{
-        grid-row: 1 / 2;
-        grid-column: 1 / 3;
+    @include md{
+
+        .donate-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          @include md{
+            width: 100%;
+            height: 100%;
+          }
+
+          .donate-img {
+            width: 60vw;
+            height: 60vw;
+            max-width: 350px;
+            max-height: 350px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 60vw;
+
+            @include md{
+              width: 300px;
+              height: 300px;
+            }
+          }
+
+          > article {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h2 {
+              margin-top: 30px;
+              text-align: center;
+              font-family: realist, sans-serif;
+              font-size: rem-calc(25px);
+              font-weight: 600;
+              margin-bottom: 12px;
+            }
+
+            p {
+              text-align: center;
+              max-width: 300px;
+              font-weight: 100;
+              line-height: 22px;
+              margin-bottom: 20px;
+            }
+
+            > nav {
+              margin-bottom: 80px;
+
+              a {
+                font-weight: 600;
+                font-size: rem-calc(20px);
+                display: inline-block;
+                background-color: $primary;
+                padding: 15px 35px;
+                border-radius: 35px;
+                color: white;
+              }
+            }
+          }
+        }
+      margin-top: -200px;
+      grid-template-columns: 10% auto 10%;
+      >ul{
+        grid-column: 2 / 3;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,auto);
+      >li{
+        &:nth-child(1){
+          grid-row: 1 / 2;
+          grid-column: 1 / 3;
+        }
+        &:nth-child(2){
+          grid-row: 1 / 2;
+          grid-column: 3 / 6;
+        }
+        &:nth-child(3){
+          grid-row: 2 / 3;
+          grid-column: 2 / 4;
         }
       }
-      &:nth-child(2){
-        @include md{
-        grid-row: 1 / 2;
-        grid-column: 3 / 6;
-        }
+      #donate-1 {
+        background-image: url("../img/Home/Donate/donate1.jpg");
+        background-position: 80% center;
       }
-      &:nth-child(3){
-        @include md{
-        grid-row: 2 / 3;
-        grid-column: 2 / 4;
-        }
+
+      #donate-2 {
+        background-image: url("../img/Home/Donate/donate2.jpg");
       }
-    }
-    #donate-1 {
-      background-image: url("../img/Home/Donate/donate1.jpg");
-      background-position: right center;
+
+      #donate-3 {
+        background-image: url("../img/Home/Donate/donate3.png");
+        background-color: $grey;
+        background-size: 70%;
+      }
+      margin-top: 50px;
     }
 
-    #donate-2 {
-      background-image: url("../img/Home/Donate/donate2.jpg");
-    }
-
-    #donate-3 {
-      background-image: url("../img/Home/Donate/donate3.png");
-      background-color: $grey;
-      background-size: 70%;
-    }
-    margin-top: 50px;
     // display: flex;
     // justify-content: center;
     // align-items: center;
     // flex-direction: column;
   }
 
-  .donate-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    @include md{
-      width: 100%;
-      height: 100%;
-    }
-
-    .donate-img {
-      width: 60vw;
-      height: 60vw;
-      max-width: 350px;
-      max-height: 350px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 60vw;
-
-      @include md{
-        width: 300px;
-        height: 300px;
-      }
-    }
-
-    > article {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-
-      h2 {
-        margin-top: 30px;
-        text-align: center;
-        font-family: realist, sans-serif;
-        font-size: rem-calc(25px);
-        font-weight: 600;
-        margin-bottom: 12px;
-      }
-
-      p {
-        text-align: center;
-        max-width: 300px;
-        font-weight: 100;
-        line-height: 22px;
-        margin-bottom: 20px;
-      }
-
-      > nav {
-        margin-bottom: 80px;
-
-        a {
-          font-weight: 600;
-          font-size: rem-calc(20px);
-          display: inline-block;
-          background-color: $primary;
-          padding: 15px 35px;
-          border-radius: 35px;
-          color: white;
-        }
-      }
-    }
-  }
 }
 }

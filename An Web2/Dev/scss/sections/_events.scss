@@ -120,6 +120,9 @@
 
         > div {
           position: sticky;
+          position: -webkit-sticky;
+          position: -ms-sticky;
+          position: -o-sticky;
           top: 30vh;
           // bottom: 50vh;
           width: 100vw;

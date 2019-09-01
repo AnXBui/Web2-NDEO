@@ -56,13 +56,16 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/img/Home/About/about_hero.webp": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
+	"/img/Home/About/about_hero.png": {
+		"ft": 32768,
+		"iS": 309031,
 		"oA": 0,
-		"oAP": "/img/Home/About/about_hero.webp",
-		"oF": 0
+		"oAP": "/img/Home/About/about_hero.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/img/Home/About/quote.svg": {
 		"ft": 2097152,
@@ -93,6 +96,17 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/img/Home/Donate/donate-hero.png": {
+		"ft": 32768,
+		"iS": 477122,
+		"oA": 0,
+		"oAP": "/img/Home/Donate/donate-hero.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"/img/Home/Donate/donate-hero.webp": {
