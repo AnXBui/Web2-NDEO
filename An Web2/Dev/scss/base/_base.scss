@@ -1,12 +1,23 @@
 /* =============
     Base
 ============= */
-#site-wrapper{
-  position: relative;
-  height: 100vh;
-  overflow-y: scroll;
-  –webkit-overflow-scrolling: touch;
+html {
 }
+
+.locator {
+  pointer-events: none;
+}
+
+main{
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+
+}
+
 figure,
 h1,
 h2,
@@ -37,16 +48,16 @@ a {
   transition: 0.25s;
 }
 
-button{
+button {
   -webkit-appearance: none;
-  outline: none;
   box-sizing: none;
+  outline: none;
 }
 
 input {
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .content-grid {
@@ -57,34 +68,51 @@ appearance: none;
 
   > div {
     grid-area: content;
-
   }
 }
 
-.form-expanded{
-  clip-path: inset(0% 0% 0% 0%) !important;
+.form-expanded {
   -webkit-clip-path: inset(0% 0% 0% 0%) !important;
-  >nav{
+  clip-path: inset(0% 0% 0% 0%) !important;
+  pointer-events: all !important;
+
+  > nav {
     color: $primary !important;
   }
 }
 
-.mb{
-  @include md{
+.mb {
+  @include md {
     display: none;
   }
 }
 
-.md{
+.lg {
+  @include lg {
+    display: none !important;
+  }
+}
+
+.md {
   display: none;
-  @include md{
+  @include md {
     display: block;
   }
 }
 
-.lg{
+.lg {
   display: none;
-  @include lg{
+  @include lg {
     display: block;
+  }
+}
+
+#form-trigger {
+  > h3 {
+    background-color: $primary;
+    border-radius: 20px;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
   }
 }

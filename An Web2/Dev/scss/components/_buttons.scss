@@ -1,3 +1,42 @@
 /* =============
     Buttons
 ============= */
+nav {
+  &:active,
+  &:hover {
+    > a {
+      background-color: $accent !important;
+      color: black !important;
+      position: relative;
+      transform: scale(1.1);
+    }
+  }
+}
+
+#burger-container {
+  border: none;
+  cursor: pointer;
+  height: 20px;
+  outline: none;
+  position: relative;
+  width: 40px;
+
+  div {
+    background-color: black;
+    height: 3px;
+    position: absolute;
+    width: 100%;
+  }
+
+  div:nth-child(1) {
+    top: 0;
+  }
+
+  div:nth-child(2) {
+    top: 10px;
+  }
+
+  div:nth-child(3) {
+    top: 20px;
+  }
+}

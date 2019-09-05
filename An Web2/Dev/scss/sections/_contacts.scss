@@ -2,67 +2,64 @@
     Contacts
 ============= */
 #contacts {
-
   margin-bottom: 150px;
   position: relative;
-
-  @include sm{
+  @include sm {
     display: grid;
     grid-template-columns: auto 85% auto;
   }
+  @include lg {
+    grid-template-columns: auto 1000px auto;
+    margin-top: 100px;
+  }
 
   .main-content {
+    -moz-box-shadow: 6px 8px 7px -5px $shadow;
+    -webkit-box-shadow: 6px 8px 7px -5px $shadow;
+    background-color: white;
+    box-shadow: 6px 8px 7px -5px $shadow;
     overflow-y: visible;
     position: relative;
-    -webkit-box-shadow: 6px 8px 7px -5px $shadow;
-    -moz-box-shadow: 6px 8px 7px -5px $shadow;
-    box-shadow: 6px 8px 7px -5px $shadow;
-    background-color: white;
-
-
-    @include sm{
-      grid-column: 2 / 3;
+    @include sm {
       border-radius: 40px;
+      grid-column: 2 / 3;
     }
 
     ul {
       display: grid;
-
-      @include md{
+      @include md {
         grid-template-columns: 50% 50%;
       }
 
       > li {
         &:nth-child(1) {
-          height: 300px;
           background-image: url("../img/Home/Contacts/contact.jpg");
           background-position: center;
           background-size: cover;
-
-          @include md{
+          height: 300px;
+          @include md {
             height: 100%;
-            width: 100%;
             min-height: 400px;
+            width: 100%;
           }
         }
 
         &:nth-child(2) {
-
-          @include md{
+          @include md {
+            align-items: center;
             display: flex;
             justify-content: center;
-            align-items: center;
           }
 
           > article {
             padding: 30px;
 
             h1 {
+              color: black;
               font-family: realist, sans-serif;
               font-size: rem-calc(25px);
               font-weight: 600;
               margin-bottom: 3px;
-              color: black;
             }
 
             p {
@@ -73,11 +70,11 @@
 
             > nav {
               a {
-                display: inline-block;
                 background-color: $primary;
-                padding: 10px 15px;
                 border-radius: 20px;
                 color: white;
+                display: inline-block;
+                padding: 10px 15px;
               }
             }
           }
@@ -87,168 +84,195 @@
   }
 
   .visual-elements {
-    overflow-x: hidden;
-    position: absolute;
-    width: 100%;
     height: calc(100% + 200px);
     margin-top: -100px;
+    overflow-x: hidden;
+    pointer-events: none;
+    position: absolute;
     top: 0;
+    width: 100%;
     z-index: -1;
-
-    .circle{
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border-radius: 200px;
-      background-color: $primary;
+    @include lg {
+      width: 100%;
+    }
+    @include xl {
+      margin-left: calc((100% - 1200px) / 2);
+      width: 1200px;
     }
 
-    >div {
-      width: 100%;
+    .circle {
+      background-color: $primary;
+      border-radius: 200px;
+      height: 200px;
+      position: absolute;
+      width: 200px;
+    }
+
+    > div {
       height: 100%;
       position: relative;
+      width: 100%;
 
-      >div{
-        &:first-child{
-          width: 150px;
+      > div {
+        &:first-child {
           height: 150px;
-          top: 40px;
-          right: 0;
           margin-right: -100px;
+          right: 0;
+          top: 40px;
+          width: 150px;
           z-index: -1;
-
-          @include sm{
-          margin-right: 0;
+          @include sm {
+            margin-right: 0;
           }
-
+          @include xl {
+            right: 50px;
+          }
         }
 
-        &:last-child{
+        &:last-child {
           bottom: 0;
           left: 0;
           margin-bottom: 20px;
           margin-left: -100px;
           z-index: -1;
-
+          @include xl {
+            height: 300px;
+            left: 100px;
+            width: 300px;
+          }
         }
       }
     }
   }
 
   .visual-elements-front {
-    overflow-x: hidden;
-    position: absolute;
-    width: 100%;
     height: calc(100% + 200px);
     margin-top: -100px;
-    top: 0;
-    z-index: 5;
+    overflow-x: hidden;
     pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    // background-color: blue;
+    @include lg {
+      width: 100%;
+    }
+    @include xl {
+      margin-left: calc((100% - 1200px) / 2);
+      width: 1200px;
+    }
 
-    .line{
+    .line {
+      background-color: $accent;
+      border-radius: 200px;
+      height: 4px;
       position: absolute;
       width: 200px;
-      height: 4px;
-      border-radius: 200px;
-      background-color: $accent;
     }
 
-    >div{
-      width: 100%;
+    > div {
       height: 100%;
       position: relative;
+      width: 100%;
 
-      >div{
-        &:first-child{
-        right: 0;
-        transform: rotate(-25deg);
-        top: 90px;
-        margin-right: -50px;
-        width: 150px;
-
-        @include sm{
-          top: 120px;
+      > div {
+        &:first-child {
+          margin-right: -50px;
+          right: 0;
+          top: 90px;
+          transform: rotate(-25deg);
+          width: 150px;
+          @include sm {
+            top: 120px;
+          }
+          @include xl {
+            margin-right: -80px;
+            right: 100px;
+            width: 300px;
+          }
         }
-        }
 
-        &:last-child{
-        bottom: 0;
-        transform: translateY(-80px) rotate(45deg);
-        margin-left: -70px;
-
+        &:last-child {
+          bottom: 0;
+          margin-left: -70px;
+          transform: translateY(-80px) rotate(45deg);
+          @include xl {
+            bottom: 110px;
+            margin-left: 0;
+            width: 450px;
+          }
         }
       }
-
-
     }
-
   }
 }
 
 #contact-form {
-  top: 0;
-  left: 0;
-  background-color: white;
-  position: absolute;
-  width: 0;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  z-index: 60;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: $light-grey;
-  clip-path: inset(0% 0% calc(100% - 20px) calc(100% - 20px));
   -webkit-clip-path: inset(0% 0% calc(100% - 20px) calc(100% - 20px));
+  align-items: center;
+  background-color: white;
+  background-color: $light-grey;
+  box-shadow: inherit;
+  clip-path: inset(0% 0% calc(100% - 20px) calc(100% - 20px));
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
   transition: 0.25s;
   transition-timing-function: ease;
-  box-shadow: inherit;
-
-  @include md{
-    clip-path: inset(calc(97% - 20px) calc(97% - 20px) 3% 3%);
+  width: 0;
+  width: 100%;
+  z-index: 60;
+  @include md {
     -webkit-clip-path: inset(calc(97% - 20px) calc(97% - 20px) 3% 3%);
+    clip-path: inset(calc(97% - 20px) calc(97% - 20px) 3% 3%);
     display: grid;
     grid-template: auto 600px auto;
   }
 
-  > nav{
+  > nav {
+    color: transparent;
+    font-size: rem-calc(30px);
     position: absolute;
     right: 12px;
     top: 12px;
-    font-size: rem-calc(30px);
-    color: transparent;
     transition: color 0.5s;
     transition-timing-function: ease;
-    @include md{
 
+    &:active,
+    &:hover {
+      color: $accent;
     }
   }
 
   > form {
     display: grid;
+    grid-column-gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 20px;
-    width: 90%;
     height: 90%;
     max-height: 400px;
-
-    @include md{
+    width: 90%;
+    @include md {
       grid-column: 2 / 3;
     }
 
     > div {
       input {
-        width: 100%;
-        height: 30px;
         border: none;
         border: 1px $grey solid;
+        height: 30px;
+        width: 100%;
 
         &::placeholder {
-          padding-left: 5px;
           color: $grey;
+          padding-left: 5px;
         }
 
         &:focus {
@@ -257,14 +281,14 @@
       }
 
       textarea {
-        width: 100%;
-        height: 60px;
         border: none;
         border: 1px $grey solid;
+        height: 60px;
+        width: 100%;
 
         &::placeholder {
-          padding-left: 5px;
           color: $grey;
+          padding-left: 5px;
         }
 
         &:focus {
@@ -272,30 +296,37 @@
         }
       }
 
-    button{
-        display: inline-block;
-        padding: 15px 40px;
-        background-color: $primary;
-        border-radius: 40px;
-        color: white;
-        font-family: realist, sans-serif;
-        font-weight: 600;
-        font-size: rem-calc(20px);
+      button {
         -webkit-appearance: none;
-        border-style: none;
+        background-color: $primary;
         border: 0;
+        border-radius: 40px;
+        border-style: none;
+        color: white;
+        display: inline-block;
+        font-family: realist, sans-serif;
+        font-size: rem-calc(20px);
+        font-weight: 600;
+        padding: 15px 40px;
+        transition: 0.25s ease;
 
+        &:active,
+        &:hover {
+          background-color: $accent;
+          color: $dark;
+          transform: scale(1.1);
+        }
       }
 
       &:nth-child(1) {
         grid-column: span 2;
 
         h1 {
+          color: black;
           font-family: realist, sans-serif;
           font-size: rem-calc(35px);
           font-weight: 600;
           margin-bottom: 3px;
-          color: black;
           text-align: center;
         }
       }
@@ -321,10 +352,10 @@
       }
 
       &:nth-child(7) {
-        margin-top: 20px;
         display: flex;
-        justify-content: center;
         grid-column: span 2;
+        justify-content: center;
+        margin-top: 20px;
       }
     }
   }

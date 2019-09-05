@@ -1,215 +1,205 @@
 /* =============
     Vision
 ============== */
-#vision{
+#vision {
   // top: 600px;
   // height: 1400px;
   padding-top: 150px;
-  z-index: 2;
   position: relative;
-
-  @include md{
+  z-index: 2;
+  @include md {
     margin-top: -450px;
     z-index: -5;
   }
 
-
-.quote{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-  @include md{
-    height: 500px;
-    width: 90%;
-  }
-
-  .expanded-quote{
-    @include md{
-      &::before{
-        top: 3%;
-        left: 10%;
-      }
-      &::after{
-        bottom: 10%;
-        right: 10%;
-      }
-    }
-  }
-
-  >div{
-    position: relative;
-    width: 100%;
+  .quote {
     height: 100%;
-    mix-blend-mode: multiply;
-    transition: 1s;
-    transition-timing-function: ease-in-out;
-
-    &::before{
-      position: absolute;
-      content:'';
-      display: block;
-      width: 80px;
-      height: 60px;
-      background-image: url('../img/Home/About/quote.svg');
-      transform: scaleX(-1);
-      background-size: contain;
-      background-repeat: no-repeat;
-      top: 60px;
-      left: 20px;
-      transition: 1s;
-      transition-timing-function: ease-in-out;
-
-      @include md{
-        top: 45%;
-        left: 45%;
-        margin-left: -40px;
-        margin-top: -30px;
-      }
-    }
-    &::after{
-      position: absolute;
-      content:'';
-      display: block;
-      width: 80px;
-      height: 60px;
-      background-image: url('../img/Home/About/quote.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      bottom: 40px;
-      right: 20px;
-      transition: 1s;
-      transition-timing-function: ease-in-out;
-      @include md{
-        bottom: 45%;
-        right: 45%;
-        margin-right: -40px;
-        margin-bottom: -30px;
-      }
-    }
-  }
-}
-
-.wavy{
-  position: absolute;
-  width: 100%;
-  height: 110%;
-  // background-color: red;
-  // opacity: 0.5;
-
-  @include md{
-    height: 800px;
-  }
-  >div{
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 110%;
-    overflow-x: hidden;
-    overflow-y: visible;
-    &::before{
-      position: absolute;
-      content:'';
-      display: block;
-      width: 35px;
-      height: 240px;
-      background-image: url('../img/Home/About/wavy.svg');
-      transform: rotate(90deg );
-      background-size: cover;
-      background-repeat: no-repeat;
-      top: 0px;
-      margin-top: -100px;
-      right: 0;
-      margin-right: 50px;
+    @include md {
+      height: 500px;
+      width: 90%;
+    }
 
-      @include md{
-        margin-top: -100px;
-        right: 80px;
-        width: 100px;
-        height: 400px;
+    .expanded-quote {
+      @include md {
+        &::before {
+          left: 10%;
+          top: 3%;
+        }
+
+        &::after {
+          bottom: 10%;
+          right: 10%;
+        }
+      }
+    }
+
+    > div {
+      height: 100%;
+      mix-blend-mode: multiply;
+      position: relative;
+      transition: 1s;
+      transition-timing-function: ease-in-out;
+      width: 100%;
+
+      &::before {
+        background-image: url("../img/Home/About/quote.svg");
+        background-repeat: no-repeat;
         background-size: contain;
+        content: '';
+        display: block;
+        height: 60px;
+        left: 20px;
+        position: absolute;
+        top: 60px;
+        transform: scaleX(-1);
+        transition: 1s;
+        transition-timing-function: ease-in-out;
+        width: 80px;
+        @include md {
+          left: 45%;
+          margin-left: -40px;
+          margin-top: -30px;
+          top: 45%;
+        }
+      }
 
+      &::after {
+        background-image: url("../img/Home/About/quote.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: 40px;
+        content: '';
+        display: block;
+        height: 60px;
+        position: absolute;
+        right: 20px;
+        transition: 1s;
+        transition-timing-function: ease-in-out;
+        width: 80px;
+        @include md {
+          bottom: 45%;
+          margin-bottom: -30px;
+          margin-right: -40px;
+          right: 45%;
+        }
       }
     }
-    &::after{
-      position: absolute;
-      content:'';
-      display: block;
-      width: 40px;
-      height: 180px;
-      background-image: url('../img/Home/About/wavy.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      bottom: 70px;
-      left: 10vw;
+  }
 
-      @include md{
-        left: 15vw;
-        width: 60px;
+  .wavy {
+    height: 110%;
+    position: absolute;
+    width: 100%;
+    // background-color: red;
+    // opacity: 0.5;
+    @include md {
+      height: 800px;
+    }
+
+    > div {
+      height: 110%;
+      overflow-x: hidden;
+      overflow-y: visible;
+      position: relative;
+      width: 100%;
+
+      &::before {
+        background-image: url("../img/Home/About/wavy.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        display: block;
         height: 240px;
-        bottom: 0;
+        margin-right: 50px;
+        margin-top: -100px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: rotate(90deg);
+        width: 35px;
+        @include md {
+          background-size: contain;
+          height: 400px;
+          margin-top: -100px;
+          right: 80px;
+          width: 100px;
+        }
+      }
+
+      &::after {
+        background-image: url("../img/Home/About/wavy.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: 70px;
+        content: '';
+        display: block;
+        height: 180px;
+        left: 10vw;
+        position: absolute;
+        width: 40px;
+        @include md {
+          bottom: 0;
+          height: 240px;
+          left: 15vw;
+          width: 60px;
+        }
       }
     }
   }
 
-}
-
-
-.main-content{
-  -webkit-box-shadow: 6px 8px 7px -5px $shadow;
-  -moz-box-shadow: 6px 8px 7px -5px $shadow;
-  box-shadow: 6px 8px 7px -5px $shadow;
-  margin-top: 70px;
-  margin-bottom: 150px;
-  padding: 25px;
-  padding-bottom: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-
-  @include md{
-    padding-top: 300px;
-    width: 85%;
-    border-bottom-right-radius: 50px;
-  }
-
-  >article{
-    max-width: 400px;
-
-    @include md{
-      max-width: 600px;
-      opacity: 0;
-      padding-bottom: 80px;
-      margin-top: 80px;
+  .main-content {
+    -moz-box-shadow: 6px 8px 7px -5px $shadow;
+    -webkit-box-shadow: 6px 8px 7px -5px $shadow;
+    align-items: center;
+    background-color: white;
+    box-shadow: 6px 8px 7px -5px $shadow;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+    margin-top: 70px;
+    padding: 25px 25px 70px;
+    @include md {
+      border-bottom-right-radius: 50px;
+      padding-top: 300px;
+      width: 85%;
     }
-  }
-  p{
-    font-size: rem-calc(28px);
-    line-height: 38px;
-    font-weight: 100;
 
-    @include md{
-      font-size: rem-calc(35px);
-      line-height: 50px;
+    > article {
+      max-width: 400px;
+      @include md {
+        margin-top: 80px;
+        max-width: 600px;
+        opacity: 0;
+        padding-bottom: 80px;
+      }
+    }
 
-    span{
+    p {
+      font-size: rem-calc(28px);
+      font-weight: 100;
+      line-height: 38px;
+      @include md {
+        font-size: rem-calc(35px);
+        line-height: 50px;
+
+        span {
+          font-family: realist, sans-serif;
+          font-size: rem-calc(30px);
+          font-weight: 600;
+          @include md {
+            font-size: rem-calc(36px);
+          }
+        }
+      }
+    }
+
+    h3 {
       font-family: realist, sans-serif;
-      font-weight: 600;
-      font-size: rem-calc(30px);
-      @include md{
-        font-size: rem-calc(36px);
-      }
-    }
-
+      font-weight: 800;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
     }
   }
-
-  h3{
-    font-family: realist, sans-serif;
-    font-weight: 800;
-    letter-spacing: 4px;
-    margin-bottom: 10px;
-
-  }
-}
 }

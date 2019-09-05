@@ -17,12 +17,236 @@
 		"oAP": "/build/.gitignore",
 		"oF": 0
 		},
-	"/css/styles.css": {
+	"/build/css/styles.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
+		"oAP": "/build/css/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/build/img/Footer/wavy.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/build/img/Footer/wavy.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/build/img/Header/header-logo.png": {
+		"ft": 32768,
+		"iS": 5817,
+		"oA": 0,
+		"oAP": "/build/img/Header/header-logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/build/img/Home/About/about_hero.png": {
+		"ft": 32768,
+		"iS": 309031,
+		"oA": 0,
+		"oAP": "/build/img/Home/About/about_hero.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/build/img/Home/About/quote.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/build/img/Home/About/quote.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/build/img/Home/About/wavy.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/build/img/Home/About/wavy.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/build/img/Home/Contacts/contact.jpg": {
+		"ft": 16384,
+		"iS": 153496,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/img/Home/Contacts/contact.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/build/img/Home/Donate/donate-hero.png": {
+		"ft": 32768,
+		"iS": 477122,
+		"oA": 0,
+		"oAP": "/build/img/Home/Donate/donate-hero.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/build/img/Home/Donate/donate1.jpg": {
+		"ft": 16384,
+		"iS": 46155,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/img/Home/Donate/donate1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/build/img/Home/Donate/donate2.jpg": {
+		"ft": 16384,
+		"iS": 56079,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/img/Home/Donate/donate2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/build/img/Home/Donate/donate3.png": {
+		"ft": 32768,
+		"iS": 30245,
+		"oA": 0,
+		"oAP": "/build/img/Home/Donate/donate3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/build/img/Home/Events/events-1.jpg": {
+		"ft": 16384,
+		"iS": 122407,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/img/Home/Events/events-1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/build/img/Home/Events/events-2.jpg": {
+		"ft": 16384,
+		"iS": 128850,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/img/Home/Events/events-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/build/img/Home/Events/events-3.jpg": {
+		"ft": 16384,
+		"iS": 99720,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/img/Home/Events/events-3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/build/img/Home/Events/events-4.jpg": {
+		"ft": 16384,
+		"iS": 43413,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/build/img/Home/Events/events-4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/build/img/Home/Join/join-student.png": {
+		"ft": 32768,
+		"iS": 54837,
+		"oA": 0,
+		"oAP": "/build/img/Home/Join/join-student.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/build/img/Home/Join/join-teacher.png": {
+		"ft": 32768,
+		"iS": 128996,
+		"oA": 0,
+		"oAP": "/build/img/Home/Join/join-teacher.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/build/img/Home/Join/wavy.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/build/img/Home/Join/wavy.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/build/js/scripts-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/build/js/scripts-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/css/jquery.vidbacking-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/jquery.vidbacking-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/jquery.vidbacking.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/jquery.vidbacking-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
 		"oAP": "/css/styles-min.css",
 		"oF": 0,
 		"oS": 3
@@ -33,7 +257,7 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/home.html",
-		"oF": 0
+		"oF": 1
 		},
 	"/img/Footer/wavy.svg": {
 		"ft": 2097152,
@@ -52,7 +276,7 @@
 		"oAP": "/img/Header/header-logo.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -63,7 +287,7 @@
 		"oAP": "/img/Home/About/about_hero.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -95,7 +319,7 @@
 		"oAP": "/img/Home/Contacts/contact.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/img/Home/Donate/donate-hero.png": {
@@ -105,7 +329,7 @@
 		"oAP": "/img/Home/Donate/donate-hero.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -136,7 +360,7 @@
 		"oAP": "/img/Home/Donate/donate2.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/img/Home/Donate/donate3.png": {
@@ -146,7 +370,7 @@
 		"oAP": "/img/Home/Donate/donate3.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -158,7 +382,7 @@
 		"oAP": "/img/Home/Events/events-1.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/img/Home/Events/events-2.jpg": {
@@ -169,7 +393,7 @@
 		"oAP": "/img/Home/Events/events-2.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/img/Home/Events/events-3.jpg": {
@@ -180,7 +404,7 @@
 		"oAP": "/img/Home/Events/events-3.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/img/Home/Events/events-4.jpg": {
@@ -191,7 +415,7 @@
 		"oAP": "/img/Home/Events/events-4.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/img/Home/Join/join-student.png": {
@@ -201,7 +425,7 @@
 		"oAP": "/img/Home/Join/join-student.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -212,7 +436,7 @@
 		"oAP": "/img/Home/Join/join-teacher.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -226,12 +450,34 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/js/scripts-min.js": {
+	"/js/jquery.vidbacking-min.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
+		"oAP": "/js/jquery.vidbacking-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/jquery.vidbacking.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/jquery.vidbacking-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/scripts-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
 		"oAP": "/js/scripts-min-min.js",
 		"oF": 0,
 		"sC": 3,
@@ -456,19 +702,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/sections/_priority.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/scss/sections/_priority.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"/scss/sections/_thankyou.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -533,9 +766,10 @@
 "projectAttributes": {
 	"creationDate": 587932265.613796,
 	"displayValue": "Dev",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "brackets_green",
-	"iconImageWasSetByUser": 0
+	"iconImageWasSetByUser": 0,
+	"lastBuiltDate": 589064876.88028896
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2594,7 +2828,7 @@
 	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules, /ndeo website",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,
