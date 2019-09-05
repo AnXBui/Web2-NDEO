@@ -10,6 +10,8 @@
 @import "base/_typography";
 
 // Components Styles
+@import "components/dont-touch/_off-canvas";
+@import "components/dont-touch/_navigation-helpers";
 @import "components/_buttons";
 @import "components/_forms";
 @import "components/_navigation";

@@ -24,44 +24,67 @@
 </head>
 
 <body>
-  <main id="site-wrapper">
-    <header>
+  <section id="off-canvas-container" data-navigation-position="right" data-navigation-slide="over">
+    <div>
+      <aside>
+        <button>
+          <i class="far fa-times-circle" id="close-btn"></i>
+        </button>
+      </aside>
+
+      <div id="nav-container">
+        <nav data-nav="main-navigation" id="mobile-navigation">
+
+          <ul>
+            <li>
+              <form id="search-button">
+                <button id="search-trigger"><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="Discover...">
+              </form>
+            </li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#event-start">EVENTS</a></li>
+            <li><a href="#join">JOIN US</a></li>
+            <li><a href="#donate">DONATE</a></li>
+            <li><a href="#contacts">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- The header needs to be outside of the main tag if you are going to position fix it. -->
+  <header data-fixed="fixed-item">
+    <div>
       <section>
+        <div><a href="#"><img src="img/Header/header-logo.png" alt="NDEO logo"></a></div>
+      </section>
+      <!-- burger icon -->
+      <section id="burger-icon">
         <button id="burger-container">
-                <div></div>
-                <div></div>
-                <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </button>
       </section>
-      <section>
-        <div></div>
-      </section>
-      <nav data-nav="main-navigation" id="mobile-navigation">
-        <div>
-        <ul>
-          <li>
-            <form id="search-button">
-              <div id="search-trigger"><i class="fas fa-search"></i></div>
-              <input type="text" placeholder="Discover...">
-            </form>
-          </li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#event-start">EVENTS</a></li>
-          <li><a href="#join">JOIN US</a></li>
-          <li><a href="#donate">DONATE</a></li>
-          <li><a href="#contacts">CONTACT</a></li>
-        </ul>
-        </div>
-      </nav>
-    </header>
 
+    </div>
+  </header>
+
+  <!-- overlay for the view when the menu is visible. Please don't move -->
+  <div class="js-off-canvas-overlay" id="overlay"></div>
+  <!-- overlay for the view when the menu is visible. Please don't move -->
+
+
+  <main id="site-wrapper">
     <!-- ============================== -->
 
 
     <section id="hero">
       <div>
         <div id="video-back">
-          <iframe width="560" height="315" src="https://player.vimeo.com/video/136101137?title=0&portrait=0&autoplay=1&loop=1&frameborder=0&allowfullscreen" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vidbacking"></iframe>
+          <iframe width="560" height="315" src="https://player.vimeo.com/video/136101137?title=0&portrait=0&autoplay=1&loop=1&frameborder=0&allowfullscreen" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="vidbacking"></iframe>
           <article>
             <h1>THE <span>FUTURE OF DANCE</span>  IS IN YOUR HAND</h1>
             <p>Join us in our mission to advance  Dance Education in the Arts.</p>
@@ -483,7 +506,9 @@
               <h1>GOT A QUESTION?</h1>
               <p>Got a burning question? Don’t by shy! Contact us now!</p>
               <nav id="form-trigger">
-                <a href="#contacts"><h3>Get in touch</h3></a>
+                <a href="#contacts">
+                  <h3>Get in touch</h3>
+                </a>
               </nav>
             </article>
           </li>

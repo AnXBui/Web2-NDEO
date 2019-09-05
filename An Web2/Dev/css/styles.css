@@ -406,6 +406,67 @@ html {
   font-family: 'Roboto', sans-serif; }
 
 /* =============
+    Off Canvas
+============= */
+main {
+  position: relative;
+  z-index: 10;
+  background-color: white; }
+
+#off-canvas-container {
+  background-color: black;
+  display: grid;
+  grid-template-areas: ". off-canvas .";
+  grid-template-columns: 10px auto 10px;
+  padding-top: 20px;
+  width: 200px;
+  /* If you need padding or margin on the off-canvas menu, please add it to this div */ }
+  #off-canvas-container > div {
+    grid-area: off-canvas; }
+
+#off-canvas-container[data-navigation-slide="over"], #off-canvas-container[data-navigation-slide="push"] {
+  height: 100vh;
+  position: fixed;
+  z-index: 1000; }
+
+#off-canvas-container[data-navigation-slide="under"] {
+  height: 100vh;
+  position: fixed;
+  z-index: 5; }
+
+/* left */
+#off-canvas-container[data-navigation-position='left'] {
+  left: 0;
+  top: 0; }
+
+/* right */
+#off-canvas-container[data-navigation-position='right'] {
+  right: 0;
+  top: 0; }
+
+/* ===================
+    Navigation Helpers
+ =================== */
+/* overlay */
+.js-off-canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100vw;
+  height: 100%;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  /* change the color of the overlay */
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden; }
+
+.is-visible {
+  opacity: 1 !important;
+  visibility: visible !important; }
+
+/* =============
     Buttons
 ============= */
 nav:active > a, nav:hover > a {
@@ -415,12 +476,14 @@ nav:active > a, nav:hover > a {
   transform: scale(1.1); }
 
 #burger-container {
+  margin-right: 5px;
   border: none;
   cursor: pointer;
   height: 20px;
   outline: none;
   position: relative;
-  width: 40px; }
+  width: 30px;
+  background-color: white; }
   #burger-container div {
     background-color: black;
     height: 3px;
@@ -451,221 +514,103 @@ textarea {
 /* =============
     Navigation
 ============= */
-header section:nth-child(2) > div {
-  background-image: url("../img/Header/header-logo.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 2.5rem;
-  width: 80px; }
+header {
+  background-color: white; }
+  header > div section:nth-child(1) img {
+    width: 60px;
+    height: 30px; }
 
-header section:nth-child(1) {
-  background-color: transparent; }
-  header section:nth-child(1) > button {
-    background-color: transparent;
-    border: 0;
-    margin-right: 20px;
-    outline: 0;
-    z-index: 9999; }
-
-header nav {
-  position: sticky;
-  position: -webkit-sticky;
-  position: -ms-sticky;
-  position: -o-sticky;
-  top: 0;
-  -webkit-transform: translateZ(0); }
-  @media (min-width: 992px) {
-    header nav {
-      position: relative; } }
-  header nav > div {
-    -webkit-clip-path: circle(0% at 100% 0);
-    align-items: center;
-    background-color: rgba(16, 170, 185, 0.98);
-    clip-path: circle(0% at 100% 0);
+#off-canvas-container {
+  /* -------------
+        Here are the properties you can changes for the off-canvas navigation-slide
+    ------------- */
+  grid-template-columns: 10px auto;
+  grid-template-areas: ". off-canvas";
+  background-color: white;
+  width: 30vw;
+  min-width: 280px;
+  max-width: 400px;
+  background-color: #2FBFCD;
+  /* close btn */
+  /* close btn */ }
+  #off-canvas-container aside {
+    width: 100%;
     display: flex;
-    height: 100vh;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    transition: 0.6s clip-path ease;
-    -webkit-transition: 0.6s clip-path ease;
-    -moz-transition: 0.6s clip-path ease;
-    -o-transition: 0.6s clip-path ease;
-    width: 100vw; }
-    @media (min-width: 992px) {
-      header nav > div {
-        -webkit-clip-path: none;
-        background-color: transparent;
-        clip-path: none;
-        display: flex;
-        height: 100%;
-        justify-content: flex-end;
-        position: relative;
-        width: 100%; } }
-    header nav > div ul {
-      width: 90%; }
-      @media (min-width: 992px) {
-        header nav > div ul {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
-          width: 100%; } }
-      header nav > div ul li {
-        border-bottom: 1px solid white;
-        width: 100%; }
-        @media (min-width: 992px) {
-          header nav > div ul li {
-            border-bottom: 0;
-            width: auto; } }
-        header nav > div ul li a {
-          color: white;
-          display: inline-block;
-          font-family: realist, sans-serif;
-          font-size: 2.5rem;
-          font-weight: 600;
-          padding: 5vh 0;
-          text-align: center;
-          width: 100%; }
-          @media (min-width: 992px) {
-            header nav > div ul li a {
-              color: black;
-              font-size: 1.125rem;
-              padding: 20px 10px;
-              position: relative;
-              width: auto; }
-              header nav > div ul li a::after {
-                background-color: #2FBFCD;
-                content: '';
-                height: 2px;
-                left: 10%;
-                position: absolute;
-                top: 40px;
-                transition: width 0.5s ease;
-                -webkit-transition: width 0.5s ease;
-                -moz-transition: width 0.5s ease;
-                -o-transition: width 0.5s ease;
-                width: 0; } }
-          @media (min-width: 992px) {
-            header nav > div ul li a:active, header nav > div ul li a:hover {
-              color: #2FBFCD; }
-              header nav > div ul li a:active::after, header nav > div ul li a:hover::after {
-                width: 80%; } }
-        header nav > div ul li:first-child {
-          border-bottom: 0;
-          left: 20px;
-          position: absolute;
-          top: 20px;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-          @media (min-width: 992px) {
-            header nav > div ul li:first-child {
-              align-items: center;
-              display: flex;
-              justify-content: center;
-              position: static; } }
-        header nav > div ul li:nth-child(2) {
-          margin-top: 5%; }
-          @media (min-width: 992px) {
-            header nav > div ul li:nth-child(2) {
-              margin-top: 0; } }
-        header nav > div ul li:last-child {
-          border-bottom: 0; }
-        header nav > div ul li form {
-          display: flex; }
-          header nav > div ul li form div {
-            align-items: center;
-            background-color: #E8D213;
-            border: none;
-            display: flex;
-            font-size: 1.5625rem;
-            height: 50px;
-            justify-content: center;
-            outline: none;
-            transition: 0.25s ease;
-            width: 50px; }
-            @media (min-width: 992px) {
-              header nav > div ul li form div {
-                background-color: #2FBFCD;
-                color: white;
-                font-size: 0.875rem;
-                height: 30px;
-                width: 30px; } }
-            header nav > div ul li form div:active, header nav > div ul li form div:hover {
-              background-color: #222222;
-              color: white; }
-              @media (min-width: 992px) {
-                header nav > div ul li form div:active, header nav > div ul li form div:hover {
-                  background-color: #E8D213;
-                  color: #222222; } }
-          header nav > div ul li form input {
-            background-color: #2FBFCD;
-            border: none;
-            color: white;
-            font-size: 1.5625rem;
-            outline: none;
-            transition: width 0.5s;
-            width: 100%; }
-            header nav > div ul li form input::placeholder {
-              color: white;
-              padding-left: 20px; }
-              @media (min-width: 992px) {
-                header nav > div ul li form input::placeholder {
-                  color: #222222;
-                  font-size: 1.0625rem;
-                  padding-left: 5px; } }
-            @media (min-width: 992px) {
-              header nav > div ul li form input {
-                background-color: #F5F5F5;
-                border: 1px #F5F5F5 solid;
-                color: #222222;
-                padding: 0 5px;
-                width: 150px; } }
-
-.nav-expanded > div {
-  -webkit-clip-path: circle(150% at 100% 0);
-  clip-path: circle(150% at 100% 0); }
+    justify-content: flex-end; }
+    #off-canvas-container aside button {
+      margin-left: -10px;
+      background-color: transparent;
+      border: none;
+      color: black;
+      cursor: pointer;
+      font-size: 1.5625rem;
+      margin-bottom: 20px;
+      transition: 0.25s; }
+  #off-canvas-container button:hover {
+    color: #2FBFCD; }
+  #off-canvas-container nav ul li {
+    color: black;
+    text-align: left;
+    width: 100%; }
+    #off-canvas-container nav ul li > form {
+      display: flex;
+      justify-content: left; }
+      #off-canvas-container nav ul li > form > button {
+        width: 40px;
+        height: 40px;
+        background-color: black;
+        color: white;
+        font-size: 1.125rem;
+        border: none; }
+        #off-canvas-container nav ul li > form > button:hover, #off-canvas-container nav ul li > form > button:active {
+          background-color: #E8D213; }
+      #off-canvas-container nav ul li > form > input {
+        padding: 8px 5px 5px 4px;
+        border: none;
+        width: 70%; }
+        #off-canvas-container nav ul li > form > input:focus {
+          box-shadow: none; }
+    #off-canvas-container nav ul li a:link,
+    #off-canvas-container nav ul li a:visited {
+      width: calc(100% - 10px);
+      display: inline-block;
+      padding-bottom: 5vh;
+      padding-top: 5vh;
+      border-bottom: 2px solid black;
+      color: black;
+      font-size: 1.5625rem;
+      font-family: realist, sans-serif;
+      font-weight: 600; }
+    #off-canvas-container nav ul li a:active,
+    #off-canvas-container nav ul li a:hover {
+      color: #E8D213; }
 
 /* =============
     Header
 ============= */
 header {
-  background-color: white;
-  display: grid;
-  grid-template-areas: "logo burger" "nav nav";
-  grid-template-columns: auto 30%;
-  position: sticky;
-  position: -webkit-sticky;
-  position: -ms-sticky;
-  position: -o-sticky;
-  top: 0;
-  z-index: 100; }
-  @media (min-width: 992px) {
-    header {
-      grid-template-areas: "logo nav";
-      grid-template-columns: 30% auto; } }
-  header section:nth-child(2) {
-    align-items: center;
-    align-items: center;
+  overflow: hidden;
+  padding-bottom: 5px;
+  position: fixed;
+  width: 100%;
+  z-index: 30; }
+  header > div {
+    align-items: flex-end;
     display: flex;
-    grid-area: logo;
-    padding: 10px; }
-    header section:nth-child(2) button {
-      background-color: white;
-      border: none;
-      outline: none; }
-  header section:nth-child(1) {
-    align-items: center;
-    display: flex;
-    grid-area: burger;
-    justify-content: flex-end;
-    padding: 10px; }
-    @media (min-width: 992px) {
-      header section:nth-child(1) {
-        display: none; } }
-  @media (min-width: 992px) {
-    header nav {
-      display: block !important; } }
+    justify-content: space-between; }
+    header > div section:first-child {
+      padding-left: 10px;
+      height: auto;
+      width: 35px; }
+    header > div section:last-child {
+      padding: 10px;
+      color: white;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      header > div section:last-child:active, header > div section:last-child:hover {
+        color: #2FBFCD; }
 
 /* =============
     Footer

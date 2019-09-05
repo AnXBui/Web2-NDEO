@@ -1,226 +1,122 @@
 /* =============
     Navigation
 ============= */
-header {
-  // logo container
-  section:nth-child(2) {
-    > div {
-      background-image: url("../img/Header/header-logo.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: rem-calc(40px);
-      width: 80px;
-    }
-  }
-  // burger container
-  section:nth-child(1) {
-    background-color: transparent;
 
-    > button {
-      background-color: transparent;
-      border: 0;
-      margin-right: 20px;
-      outline: 0;
-      z-index: 9999;
-    }
-  }
-
-  nav {
-    position: sticky;
-    position: -webkit-sticky;
-    position: -ms-sticky;
-    position: -o-sticky;
-    top: 0;
-    -webkit-transform: translateZ(0);
-    @include lg {
-      position: relative;
-    }
-
-    > div {
-      -webkit-clip-path: circle(0% at 100% 0);
-      align-items: center;
-      background-color: rgba(16,170,185,0.98);
-      clip-path: circle(0% at 100% 0);
-      display: flex;
-      height: 100vh;
-      justify-content: center;
-      position: absolute;
-      top: 0;
-      transition: 0.6s clip-path ease;
-      -webkit-transition: 0.6s clip-path ease;
-      -moz-transition: 0.6s clip-path ease;
-      -o-transition: 0.6s clip-path ease;
-      width: 100vw;
-      @include lg {
-        -webkit-clip-path: none;
-        background-color: transparent;
-        clip-path: none;
-        display: flex;
-        height: 100%;
-        justify-content: flex-end;
-        position: relative;
-        width: 100%;
-      }
-
-      ul {
-        width: 90%;
-        @include lg {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
-          width: 100%;
-        }
-
-        li {
-          border-bottom: 1px solid white;
-          width: 100%;
-          @include lg {
-            border-bottom: 0;
-            width: auto;
-          }
-
-          a {
-            color: white;
-            display: inline-block;
-            font-family: realist, sans-serif;
-            font-size: rem-calc(40px);
-            font-weight: 600;
-            padding: 5vh 0;
-            text-align: center;
-            width: 100%;
-            @include lg {
-              color: black;
-              font-size: rem-calc(18px);
-              padding: 20px 10px;
-              position: relative;
-              width: auto;
-
-              &::after {
-                background-color: $primary;
-                content: '';
-                height: 2px;
-                left: 10%;
-                position: absolute;
-                top: 40px;
-                transition: width 0.5s ease;
-                -webkit-transition: width 0.5s ease;
-                -moz-transition: width 0.5s ease;
-                -o-transition: width 0.5s ease;
-                width: 0;
-              }
-            }
-
-            &:active,
-            &:hover {
-              @include lg {
-                color: $primary;
-
-                &::after {
-                  width: 80%;
-                }
-              }
-            }
-          }
-
-          &:first-child {
-            border-bottom: 0;
-            left: 20px;
-            position: absolute;
-            top: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            @include lg {
-              align-items: center;
-              display: flex;
-              justify-content: center;
-              position: static;
-            }
-          }
-
-          &:nth-child(2) {
-            margin-top: 5%;
-            @include lg {
-              margin-top: 0;
-            }
-          }
-
-          &:last-child {
-            border-bottom: 0;
-          }
-
-          form {
-            display: flex;
-
-            div {
-              align-items: center;
-              background-color: $accent;
-              border: none;
-              display: flex;
-              font-size: rem-calc(25px);
-              height: 50px;
-              justify-content: center;
-              outline: none;
-              // clip-path: ellipse(30px 30px);
-              transition: 0.25s ease;
-              width: 50px;
-              @include lg {
-                background-color: $primary;
-                color: white;
-                font-size: rem-calc(14px);
-                height: 30px;
-                width: 30px;
-              }
-
-              &:active,
-              &:hover {
-                // clip-path: none;
-                background-color: $dark;
-                color: white;
-                @include lg {
-                  background-color: $accent;
-                  color: $dark;
-                }
-              }
-            }
-
-            input {
-              background-color: $primary;
-              border: none;
-              color: white;
-              font-size: rem-calc(25px);
-              outline: none;
-              transition: width 0.5s;
-              width: 100%;
-
-              &::placeholder {
-                color: white;
-                padding-left: 20px;
-                @include lg {
-                  color: $dark;
-                  font-size: rem-calc(17px);
-                  padding-left: 5px;
-                }
-              }
-              @include lg {
-                background-color: $light-grey;
-                border: 1px $light-grey solid;
-                color: $dark;
-                padding: 0 5px;
-                width: 150px;
-              }
-            }
-          }
-        }
-      }
+header{
+  background-color: white;
+  >div{
+    section{
+     &:nth-child(1){
+       img{
+         width: 60px;
+         height: 30px;
+       }
+     }
     }
   }
 }
 
+#off-canvas-container{
+    /* -------------
+        Here are the properties you can changes for the off-canvas navigation-slide
+    ------------- */
 
-.nav-expanded {
-  > div {
-    -webkit-clip-path: circle(150% at 100% 0);
-    clip-path: circle(150% at 100% 0);
-  }
+    grid-template-columns: 10px auto;
+    grid-template-areas: ". off-canvas";
+    background-color: white;
+    // padding-top: 20px;
+
+    // width of the off canvas navigation
+    width: 30vw;
+    min-width: 280px;
+    max-width: 400px;
+    background-color: $primary;
+
+
+    /* close btn */
+    aside{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      button {
+          margin-left: -10px;
+          background-color: transparent;
+          border: none;
+          color: black;
+          cursor: pointer;
+          font-size: rem-calc(25);
+          margin-bottom: 20px;
+          transition: 0.25s;
+      }
+    }
+
+
+    /* close btn */
+    button:hover {
+        color: $primary;
+    }
+    nav{
+
+
+
+      ul {
+
+          li {
+              color: black;
+              text-align: left;
+              width: 100%;
+
+              >form{
+                display: flex;
+                justify-content: left;
+                >button{
+                  width: 40px;
+                  height: 40px;
+                  background-color: black;
+                  color: white;
+                  font-size: rem-calc(18px);
+                  border: none;
+
+                  &:hover, &:active{
+                    background-color: $accent;
+                  }
+                }
+                >input{
+                  padding: 8px 5px 5px 4px;
+                  border: none;
+                  width: 70%;
+                  &:focus{
+                    box-shadow: none;
+
+                  }
+                }
+
+
+              }
+
+
+              a:link,
+              a:visited {
+                width: calc(100% - 10px);
+                display: inline-block;
+                padding-bottom: 5vh;
+                padding-top: 5vh;
+                border-bottom: 2px solid black;
+                color: black;
+                font-size: rem-calc(25px);
+                font-family: realist, sans-serif;
+                font-weight: 600;
+
+              }
+
+              a:active,
+              a:hover {
+                  color: $accent;
+              }
+          }
+      }
+
+    }
+
+
 }
